@@ -201,13 +201,14 @@
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
+<!-- Script to fetch and display products -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const API_KEY = '6601FA1DN5lDUrw9iuoYfHFh2DxJR9kUwK0yEDtk';
+    const API_KEY = 'your_printful_api_key';
     const BASE_URL = 'https://api.printful.com';
 
     async function fetchProducts() {
-      const response = await fetch(`${BASE_URL}/products`, {
+      const response = await fetch(`${BASE_URL}/store/products`, {
         headers: {
           'Authorization': `Bearer ${API_KEY}`
         }
