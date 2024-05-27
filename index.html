@@ -77,7 +77,6 @@
   <!-- Project Section -->
   <div class="w3-container w3-padding-32" id="projects">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Hats</h3>
-    <div id="products-container" class="w3-row-padding w3-grayscale"></div> <!-- This is the added div -->
   </div>
 
   <!-- About Section -->
@@ -147,43 +146,6 @@
 <footer class="w3-center w3-black w3-padding-16">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
-
-<!-- Script to fetch and display products -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const ACCESS_KEY = 'smk_GN0I1Os3OdfqzjJnTOWn1wlbqqq2Y2Pc10TS';
-    const BASE_URL = 'https://api.printful.com';
-
-    async function fetchProducts() {
-      const response = await fetch(`${BASE_URL}/store/products`, {
-        headers: {
-          'Authorization': `Bearer ${ACCESS_KEY}`
-        }
-      });
-      const data = await response.json();
-      return data.result;
-    }
-
-    async function displayProducts() {
-      const productsContainer = document.getElementById('products-container');
-      const products = await fetchProducts();
-
-      products.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'w3-col l3 m6 w3-margin-bottom';
-        productDiv.innerHTML = `
-          <div class="w3-display-container">
-            <img src="${product.thumbnail_url}" alt="${product.name}" style="width:100%">
-            <div class="w3-display-topleft w3-black w3-padding">${product.name}</div>
-          </div>
-        `;
-        productsContainer.appendChild(productDiv);
-      });
-    }
-
-    displayProducts();
-  });
-</script>
 
 </body>
 </html>
