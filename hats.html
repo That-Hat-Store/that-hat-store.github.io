@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>That Hat Store—where headwear reigns supreme!</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <style>
+    .container {
+      position: relative;
+      width: 45%;
+    }
+    .image {
+      display: block;
+      width: 45%;
+      height: auto;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 45%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+    .container:hover .overlay {
+      opacity: 1;
+    }
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #7aa8b7;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background-color: #c2c7c7;
+    }
+  </style>
+  <style>
+    * {box-sizing: border-box;}
+    
+    body { 
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .header {
+      overflow: hidden;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+    }
+    
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+    }
+    
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+    
+    .header-right {
+      float: right;
+    }
+    
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .header-right {
+        float: none;
+      }
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="index.html" class="w3-bar-item w3-button"><img src="photos/Logos/ThatHatStore(Heart)(XtraSmall).png" alt="That Hat Store Logo"></a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="hats.html" class="w3-bar-item w3-button"><strong><i>*Hats</i></strong></a>
+        <a href="comm.html" class="w3-bar-item w3-button">Community</a>
+        <a href="policy.html" class="w3-bar-item w3-button">ToS</a>
+      </div>
+    </div>
+  </div>
+
+<!-- Start of page -->
+
+
+<!-- Hats -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+<div class="w3-container w3-red">
+    <h1><b>Sesonal</b> hats</h1>
+</div>
+<hr>
+  <!-- Memorial day hat -->
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="mockups/Memorial day hat/flat-bill-cap-royal-blue-front-6653f75d5ac08.png">
+        <img src="mockups/Memorial day hat/flat-bill-cap-royal-blue-front-6653f75d5ac08.png" alt="Memorial day hat" width="600" height="600">
+      </a>
+      <div class="desc">Memorial day hat
+      <p style="color:rgb(73, 71, 71);"><i><strong>$19 (+ tax)</strong></i></p></div>
+    </div>
+  </div>
+
+  <!-- Minimal memorial day hat -->
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="mockups/Minimal memorial day hat/flat-bill-cap-white-front-6654d3fe3a127.png">
+        <img src="mockups/Minimal memorial day hat/flat-bill-cap-white-front-6654d3fe3a127.png" alt="Minimal Memorial day hat" width="600" height="600">
+      </a>
+      <div class="desc">Minimal Memorial day hat
+      <p style="color:rgb(73, 71, 71);"><i><strong>$19 (+ tax)</strong></i></p></div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+<hr>
+<!-- End of page-->  
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>© That Hat Store 2024. All rights reserved.</p>
+  <img src="photos/cardsfull.png" alt="Payment Methods">
+</footer>
+
+</body>
+</html>
