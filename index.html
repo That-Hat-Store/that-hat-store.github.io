@@ -39,48 +39,51 @@
 </style>
 
 <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
+  div.gallery {
+    border: 1px solid #ccc;
   }
   
-  .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
+  div.gallery:hover {
+    border: 1px solid #777;
   }
   
-  .flip-card-inner {
-    position: relative;
+  div.gallery img {
     width: 100%;
-    height: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
     text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  * {
+    box-sizing: border-box;
   }
   
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
   }
   
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
   }
   
-  .flip-card-back {
-    background-color: #ffffff;
-    color: black;
-    transform: rotateY(180deg);
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   </style>
 
@@ -128,59 +131,29 @@
 <div class="w3-content w3-padding" style="max-width:1564px">
 
   <!-- Hats-->
-  <!-- Memorial day hat-->
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="mockups/Memorial day hat/flat-bill-cap-royal-blue-front-6653f75d5ac08.png" alt="Memorial Day hat" style="width:300px;height:300px;">
-      </div>
-      <div class="flip-card-back">
-        <div class="w3-card-4">
-          <header class="w3-container w3-red">
-            <h2>Memorial day hat</h2>
-          </header>
-          <div class="w3-container">
-            <p>This hat is dedicated to all the U.S soldiers who died in wars. The hats come in Red, White And blue to honor the flag. May everyone that did in war rest in peace. Remember and Honor.</p>
-            <p style="color:rgb(73, 71, 71);"><i><strong>$19 (+ tax)</strong></i></p>
-            <a class="button" href="https://www.w3docs.com/learn-html/html-button-tag.html">More info...</a>
-          </div>
-          </div>
-    </div>
+<!-- Memorial day hat-->
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="mockups/Memorial day hat/flat-bill-cap-royal-blue-front-6653f75d5ac08.png" alt="Memorial day hat" width="600" height="600">
+    </a>
+    <div class="desc">Memorial day hat</div>
+    <p style="color:rgb(73, 71, 71);"><i><strong>$19 (+ tax)</strong></i></p>
   </div>
-</div>
-</div>
 </div>
 
 
 
 
 <!-- Minimal memorial day hat -->
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="mockups/Minimal memorial day hat/flat-bill-cap-white-front-6654d3fe3a127.png" alt="Minimal Memorial Day hat" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <div class="w3-card-4">
-        <header class="w3-container w3-red">
-          <h2>Minimal memorial day hat</h2>
-        </header>
-        
-        <div class="w3-container">
-          <p>This hat is dedicated to all the U.S soldiers who died in wars. It's minimal design lets you not look tacky in a croud. Also, may everyone that did in war rest in peace. Remember and Honor.</p>
-          <p style="color:rgb(73, 71, 71);"><i><strong>$19 (+ tax)</strong></i></p>
-          <a class="button" href="https://www.w3docs.com/learn-html/html-button-tag.html">More info...</a>
-        </div>
-        </div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mockups/Minimal memorial day hat/flat-bill-cap-white-front-6654d3fe3a127.png">
+      <img src="mockups/Minimal memorial day hat/flat-bill-cap-white-front-6654d3fe3a127.png" alt="Memorial day hat" width="600" height="600">
+    </a>
+    <div class="desc">Minimal Memorial day hat</div>
+    <p style="color:rgb(73, 71, 71);"><i><strong>$19 (+ tax)</strong></i></p>
   </div>
-</div>
-</div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 
 
