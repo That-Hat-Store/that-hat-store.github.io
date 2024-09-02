@@ -114,34 +114,42 @@
   <sub>Last updated on September 2nd, 2024 at 7:52 AM</sub>
 </section>
 </div>
+
 <div class="w3-container w3-padding-32" id="contact">
   <!-- Contact Section -->
   <form id="contact-form">
-    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-    <input class="w3-input w3-section w3-border" type="email" placeholder="Email" required name="Email">
+    <input type="hidden" name="contact_number" value="697483">
+    <input class="w3-input w3-border" type="text" placeholder="Name" name="user_name" required name="Name">
+    <input class="w3-input w3-section w3-border" type="email" placeholder="Email" name="user_email" required name="Email">
     <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-    <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+    <textarea class="w3-input w3-section w3-border" name="message"></textarea>
     <button class="w3-button w3-black w3-section" type="submit">
-      <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      <input type="submit" value="Send message">
     </button>
  </form>
- 
- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
  <script type="text/javascript">
-    (function() {
-       emailjs.init("wae1vVstyw7GiK-V7"); // User id
-    })();
- 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-       event.preventDefault();
- 
-       emailjs.sendForm('your-service-id', 'your-template-id', this)
-          .then(function() {
-             alert('SUCCESS!');
-          }, function(error) {
-             alert('FAILED...', error);
-          });
-    });
+     (function() {
+         // https://dashboard.emailjs.com/admin/account
+         emailjs.init({
+           publicKey: "wae1vVstyw7GiK-V7",
+         });
+     })();
+ </script>
+ <script type="text/javascript">
+     window.onload = function() {
+         document.getElementById('contact-form').addEventListener('submit', function(event) {
+             event.preventDefault();
+             // these IDs from the previous steps
+             emailjs.sendForm('contact_service', 'contact_form', this)
+                 .then(() => {
+                     console.log('SUCCESS!');
+                 }, (error) => {
+                     console.log('FAILED...', error);
+                 });
+         });
+     }
+ </script>
  </script>
  
   
