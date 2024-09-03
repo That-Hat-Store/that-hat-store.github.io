@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Contact us</title>
+<title>Email sucessful!</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -75,59 +75,13 @@
 <br>
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
-<div class="w3-container w3-teal">
-<center>
-  <h1>Contact us</h1>
-  <p> Use the email form bellow or contact us at <i>"thathatstore.incoming.secure@protonmail.com"</i></p>
+<div class="w3-container">
+
+  <h1>Email sent sucessfuly!</h1>
+  <p> Now all you do is sit back and relax until our customer support emails you back. Maybe get some coffee while you are waiting.</p>
+  <p> Or tea, whatever.</p>
 </div>
 </div>
-
-<div class="w3-container w3-padding-32" id="contact">
-  <!-- Contact Section -->
-  <form id="contact-form">
-    <input type="hidden" name="contact_number" id="contact_number">
-    <input class="w3-input w3-border" type="text" placeholder="Name" name="user_name" required>
-    <input class="w3-input w3-section w3-border" type="email" placeholder="Email" name="user_email" required>
-    <textarea class="w3-input w3-section w3-border" name="message"></textarea>
-    <input type="submit" value="Send message">
-  </form>
-  <sub>Do not enter personal information like home adresses and debit cards into this form.</sub>
-</div>
-</center>
-<script>
-  // Generate a random 6-digit number
-  function generateRandomNumber() {
-    return Math.floor(100000 + Math.random() * 900000).toString();
-  }
-
-  // Set the random number as the value of the hidden input
-  document.getElementById('contact_number').value = generateRandomNumber();
-</script>
-
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
- <script type="text/javascript">
-     (function() {
-         emailjs.init({
-           publicKey: "wae1vVstyw7GiK-V7",
-         });
-     })();
- </script>
-<script type="text/javascript">
-  window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          // these IDs from the previous steps
-          emailjs.sendForm('contact_service', 'contact_form', this)
-              .then(() => {
-                  console.log('SUCCESS!');
-                  window.location.href = 'suc.html'; // Redirect on success
-              }, (error) => {
-                  console.log('FAILED...', error);
-                  window.location.href = 'unc.html'; // Redirect on failure
-              });
-      });
-  }
-</script>
 
 <!-- End page content -->
 </div>
