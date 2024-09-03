@@ -118,12 +118,25 @@
 <div class="w3-container w3-padding-32" id="contact">
   <!-- Contact Section -->
   <form id="contact-form">
-    <input type="hidden" name="contact_number" value="697483">
-    <input class="w3-input w3-border" type="text" placeholder="Name" name="user_name" required name="Name">
-    <input class="w3-input w3-section w3-border" type="email" placeholder="Email" name="user_email" required name="Email">
+    <input type="hidden" name="contact_number" id="contact_number">
+    <input class="w3-input w3-border" type="text" placeholder="Name" name="user_name" required>
+    <input class="w3-input w3-section w3-border" type="email" placeholder="Email" name="user_email" required>
     <textarea class="w3-input w3-section w3-border" name="message"></textarea>
     <input type="submit" value="Send message">
- </form>
+  </form>
+  <sub>Do not enter personal information like home adresses and debit cards into this form.</sub>
+</div>
+
+
+<script>
+  // Generate a random 6-digit number
+  function generateRandomNumber() {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+  }
+
+  // Set the random number as the value of the hidden input
+  document.getElementById('contact_number').value = generateRandomNumber();
+</script>
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
  <script type="text/javascript">
      (function() {
