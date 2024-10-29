@@ -9,11 +9,12 @@
   <style>
     .container {
       position: relative;
-      width: 45%;
+      width: 100%;
+      max-width: 600px;
     }
     .image {
       display: block;
-      width: 45%;
+      width: 100%;
       height: auto;
     }
     .overlay {
@@ -23,7 +24,7 @@
       left: 0;
       right: 0;
       height: 100%;
-      width: 45%;
+      width: 100%;
       opacity: 0;
       transition: .5s ease;
       background-color: #008CBA;
@@ -44,9 +45,6 @@
     div.desc {
       padding: 15px;
       text-align: center;
-    }
-    * {
-      box-sizing: border-box;
     }
     .responsive {
       padding: 0 6px;
@@ -139,31 +137,28 @@
         float: none;
       }
     }
-    </style>
+  </style>
 </head>
 <body>
 
-<div id="navabar">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
     <a href="index.html" class="w3-bar-item w3-button"><img src="photos/Logos/ThatHatStore(Heart)(XtraSmall).png" alt="That Hat Store Logo"></a>
-    <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="hats.html" class="w3-bar-item w3-button">Seasonal hats</a>
       <a href="dhats.html" class="w3-bar-item w3-button">Designer hats</a>
-      <a href="dhats.html" class="w3-bar-item w3-button">Other prouducts</a>
+      <a href="other-products.html" class="w3-bar-item w3-button">Other products</a>
     </div>
   </div>
-</div>
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="photos/usa spreadsheet header.png" alt="That Hat Store hats and flag" width="1500" height="800"">
+  <img class="w3-image" src="photos/usa spreadsheet header.png" alt="That Hat Store hats and flag" style="width:100%; height:auto;">
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-text-white">
-      <span class="w3-padding w3-black w3-opacity-min"><b>That Hat store—</b></span>
+      <span class="w3-padding w3-black w3-opacity-min"><b>That Hat Store—</b></span>
       <span class="w3-hide-small w3-text-black">where headwear reigns supreme!</span>
     </h1>
   </div>
@@ -173,7 +168,7 @@
 <div class="w3-content w3-padding" style="max-width:1564px">
 
   <!-- Hat iframe -->
-  <iframe src="hatsiframe.html" style="height:470px;width:1500px;border:none"  title="Hats"></iframe>
+  <iframe src="hatsiframe.html" style="width:100%; height:470px; border:none;" title="Hats"></iframe>
 
   <div class="clearfix"></div>
 
@@ -181,28 +176,23 @@
 
 <!-- Content -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="sidehatscomplete.png" alt="That Hat Store: What we're MADE of!" width="1500" height="800">
+  <img class="w3-image" src="sidehatscomplete.png" alt="That Hat Store: What we're MADE of!" style="width:100%; height:auto;">
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-text-white">
-      <h1 class="w3-padding w3-black w3-opacity-min"><b>What we do: design and sell great hats</b></h1>
-      <p class="w3-hide-small w3-text-black">We work around the clock making designs that we know you will love, With an ever-changing hat collection that changes each month. From January to December, we have you covered—literally!</p>
+      <span class="w3-padding w3-black w3-opacity-min"><b>What we do: design and sell great hats</b></span>
+      <p class="w3-hide-small w3-text-black">We work around the clock making designs that we know you will love, with an ever-changing hat collection that changes each month. From January to December, we have you covered—literally!</p>
     </h1>
   </div>
 </header>
-
-<!-- End of page-->  
-</div>
-
-
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <p>© That Hat Store 2024. All rights reserved.</p>
-  <img src="photos/cardsfull.png" alt="Payment Methods">
+  <img src="photos/cardsfull.png" alt="Payment Methods" style="width:100%; max-width:300px;">
   <br>
-  <a href="policy.html" title="Terms of conditions" target="_blank" class="w3-hover-text-green"><sub>Terms of conditions<sub></a>
-    <a href="contact.html" title="Contact us" target="_blank" class="w3-hover-text-green"><sub>Contact us<sub></a>
+  <a href="policy.html" title="Terms of conditions" target="_blank" class="w3-hover-text-green"><sub>Terms of conditions</sub></a>
+  <a href="contact.html" title="Contact us" target="_blank" class="w3-hover-text-green"><sub>Contact us</sub></a>
 </footer>
 
 </body>
