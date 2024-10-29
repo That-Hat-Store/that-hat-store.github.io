@@ -30,12 +30,13 @@
     padding: 0 20px;
   }
 
+  /* Larger font size for desktop */
   .hero-text h1 {
-    font-size: 8vw; /* Responsive font size */
+    font-size: 50px;
   }
 
   .hero-text p {
-    font-size: 4vw; /* Responsive paragraph size */
+    font-size: 20px;
   }
 
   .hero-text button {
@@ -47,7 +48,7 @@
     background-color: #ddd;
     text-align: center;
     cursor: pointer;
-    font-size: 4vw;
+    font-size: 18px;
   }
 
   .hero-text button:hover {
@@ -67,10 +68,26 @@
     max-width: 100%;
   }
 
-  /* Media Query for screens smaller than 600px */
-  @media screen and (max-width: 600px) {
+  /* Responsive adjustments for screens smaller than 768px */
+  @media screen and (max-width: 768px) {
     .hero-text h1 {
-      font-size: 6vw; /* Smaller font size on mobile */
+      font-size: 8vw; /* Scale font size on smaller screens */
+    }
+
+    .hero-text p {
+      font-size: 4vw;
+    }
+
+    .hero-text button {
+      font-size: 4vw;
+      padding: 8px 20px;
+    }
+  }
+
+  /* Additional fine-tuning for extra-small screens (e.g., under 480px) */
+  @media screen and (max-width: 480px) {
+    .hero-text h1 {
+      font-size: 6vw;
     }
 
     .hero-text p {
@@ -79,7 +96,7 @@
 
     .hero-text button {
       font-size: 3.5vw;
-      padding: 8px 20px;
+      padding: 6px 15px;
     }
   }
 </style>
